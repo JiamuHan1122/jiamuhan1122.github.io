@@ -16,3 +16,9 @@ posts:
     slug: "project_log_01"
     category: "Projects"
     summary: "Some implementation notes and reflections from my recent project."
+
+  - title: "面向视频数据的时序目标检测算法研究"
+    date: "2026-04-12"
+    slug: "project_log"
+    category: "毕业设计"
+    summary: "毕业设计的思路/总结."
