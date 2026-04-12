@@ -1,5 +1,5 @@
 posts:
-  - title: "Temporal Action Detection: A Brief History"
+  - title: "Temporal Action Detection 时序目标检测算法: A Brief History"
     date: "2026-04-12"
     slug: "tad_history"
     summary: "An overview of the development of Temporal Action Detection (TAD), from sliding windows to transformer-based methods."
