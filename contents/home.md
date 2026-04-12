@@ -1,6 +1,6 @@
 
 
-[![GitHub](https://img.shields.io/badge/GitHub-Jiamu_Han-black?logo=github)](https://github.com/Jiamu_Han)
+[![GitHub](https://img.shields.io/badge/GitHub-Jiamu_Han-black?logo=github)](https://github.com/JiamuHan1122)
 
 He is currently pursuing a master's degree in Intelligent Science and Technology at Xi'an University of Architecture and Technology.
 
