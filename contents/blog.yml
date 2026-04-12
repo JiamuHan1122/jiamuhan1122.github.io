@@ -1,5 +1,18 @@
 posts:
-  - title: "Temporal Action Detection 时序目标检测算法: A Brief History"
+  - title: "Temporal Action Detection: A Brief History"
     date: "2026-04-12"
     slug: "tad_history"
+    category: "Computer Vision"
     summary: "An overview of the development of Temporal Action Detection (TAD), from sliding windows to transformer-based methods."
+
+  - title: "Transformer Basics"
+    date: "2026-04-20"
+    slug: "transformer_basics"
+    category: "Natural Language Processing"
+    summary: "A short note on the transformer architecture and its basic intuition."
+
+  - title: "My Project Log 01"
+    date: "2026-04-22"
+    slug: "project_log_01"
+    category: "Projects"
+    summary: "Some implementation notes and reflections from my recent project."

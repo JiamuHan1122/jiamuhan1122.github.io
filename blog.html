@@ -9,6 +9,7 @@
     <title>Blog - Jiamu Han</title>
 
     <link rel="icon" href="static/assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="static/css/styles.css" rel="stylesheet" />
     <link href="static/css/main.css" rel="stylesheet" />
 
@@ -17,24 +18,63 @@
     <script src="static/js/blog.js"></script>
 </head>
 
-<body>
+<body id="page-top">
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
-    <div class="container px-5">
-        <a class="navbar-brand fw-bold" href="index.html">Jiamu Han</a>
-        <div class="navbar-nav ms-auto">
-            <a class="nav-link" href="index.html">HOME</a>
-            <a class="nav-link" href="blog.html">BLOG</a>
+    <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+        <div class="container px-5">
+            <a class="navbar-brand fw-bold" href="index.html">Jiamu Han</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                MENU
+                <i class="bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3 active" href="blog.html">BLOG</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<section style="padding-top:100px">
-    <div class="container px-5">
-        <h2><i class="bi bi-journal-text"></i> BLOG</h2>
-        <div id="blog-list"></div>
-    </div>
-</section>
+    <section class="blog-page-section">
+        <div class="container px-5">
+            <div class="blog-header-block">
+                <div>
+                    <h1 class="blog-page-title">Blog</h1>
+                    <p class="blog-page-subtitle">
+                        Notes on computer vision, projects, competitions, and research ideas.
+                    </p>
+                </div>
+                <div class="blog-search-wrap">
+                    <i class="bi bi-search blog-search-icon"></i>
+                    <input
+                        id="blog-search"
+                        class="blog-search-input"
+                        type="text"
+                        placeholder="Search posts..."
+                        oninput="handleSearch()"
+                    />
+                </div>
+            </div>
+
+            <div class="blog-layout">
+                <aside class="blog-sidebar">
+                    <div class="blog-sidebar-card">
+                        <div class="blog-sidebar-title">Categories</div>
+                        <div id="category-list" class="blog-category-list"></div>
+                    </div>
+                </aside>
+
+                <main class="blog-main">
+                    <div id="blog-meta-bar" class="blog-meta-bar"></div>
+                    <div id="blog-list" class="blog-list"></div>
+                    <div id="blog-empty" class="blog-empty-state" style="display:none;">
+                        No posts found.
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
