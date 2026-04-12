@@ -7,7 +7,13 @@ async function fetchYaml(path) {
     if (!res.ok) {
         throw new Error(`Failed to load ${path}: ${res.status}`);
     }
+
     const text = await res.text();
+
+    if (typeof jsyaml === "undefined") {
+        throw new Error("jsyaml is not defined. Please check js-yaml.min.js.");
+    }
+
     return jsyaml.load(text);
 }
 
@@ -37,18 +43,16 @@ function renderCategories(categories) {
     const container = document.getElementById("category-list");
     if (!container) return;
 
-    container.innerHTML = categories.map(category => {
-        const activeClass = category === currentCategory ? " active" : "";
-        return `
-            <button
-                class="blog-category-btn${activeClass}"
-                onclick="setCategory('${escapeHtml(category)}')"
-                type="button"
-            >
-                ${escapeHtml(category)}
-            </button>
-        `;
-    }).join("");
+    container.innerHTML = "";
+
+    categories.forEach(category => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "blog-category-btn" + (category === currentCategory ? " active" : "");
+        btn.textContent = category;
+        btn.addEventListener("click", () => setCategory(category));
+        container.appendChild(btn);
+    });
 }
 
 function filterPosts() {
@@ -93,6 +97,7 @@ function renderMetaBar(posts) {
 function renderPosts(posts) {
     const container = document.getElementById("blog-list");
     const emptyState = document.getElementById("blog-empty");
+
     if (!container || !emptyState) return;
 
     if (posts.length === 0) {
@@ -135,13 +140,13 @@ function renderPosts(posts) {
 
 function refreshPostView() {
     const filtered = filterPosts();
+    renderCategories(getAllCategories(allPosts));
     renderMetaBar(filtered);
     renderPosts(filtered);
 }
 
 function setCategory(category) {
     currentCategory = category;
-    renderCategories(getAllCategories(allPosts));
     refreshPostView();
 }
 
@@ -153,22 +158,36 @@ function handleSearch() {
 
 async function loadBlogList() {
     const listContainer = document.getElementById("blog-list");
+    const categoryContainer = document.getElementById("category-list");
+    const metaBar = document.getElementById("blog-meta-bar");
+
     if (!listContainer) return;
 
     try {
         const data = await fetchYaml("contents/blog.yml");
-        allPosts = (data.posts || []).slice();
 
+        if (!data || !Array.isArray(data.posts)) {
+            throw new Error("Invalid blog.yml format: 'posts' must be an array.");
+        }
+
+        allPosts = data.posts.slice();
         allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-        const categories = getAllCategories(allPosts);
-        renderCategories(categories);
         refreshPostView();
     } catch (error) {
         console.error(error);
+
+        if (categoryContainer) {
+            categoryContainer.innerHTML = `<div style="color:red;">Failed to load categories</div>`;
+        }
+
+        if (metaBar) {
+            metaBar.innerHTML = `<span style="color:red;">Failed to load metadata</span>`;
+        }
+
         listContainer.innerHTML = `
-            <div class="blog-empty-state">
-                Failed to load blog posts.
+            <div class="blog-empty-state" style="color:red;">
+                Failed to load blog posts. Please check F12 Console.
             </div>
         `;
     }
@@ -191,6 +210,21 @@ async function loadPost() {
         if (!res.ok) {
             throw new Error(`Failed to load post: ${res.status}`);
         }
+
         const md = await res.text();
+
+        if (typeof marked === "undefined") {
+            throw new Error("marked is not defined. Please check marked.min.js.");
+        }
+
         container.innerHTML = marked.parse(md);
-    } catch (error)
+    } catch (error) {
+        console.error(error);
+        container.innerHTML = `<p>Failed to load post: ${escapeHtml(slug)}.md</p>`;
+    }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    loadBlogList();
+    loadPost();
+});
