@@ -2,7 +2,7 @@
 
 # 🧠 Motivation（动机总结）
 
-## ![motivation](D:\Github\jiamuhan1122.github.io\contents\posts\images\project_log\motivation.png)
+## ![motivation](/contents/posts/images/project_log/motivation.png)
 
 1. **现有方法（baseline）的问题**
    - 时间边界不准（boundary error）
@@ -46,7 +46,7 @@
 
 # 🧩 Framework（方法总结）
 
-## ![framework](D:\Github\jiamuhan1122.github.io\contents\posts\images\project_log\framework.png)
+## ![framework](/contents/posts/images/project_log/framework.png)
 
 ### Stage 1：语义蒸馏（Semantic Distillation）
 
