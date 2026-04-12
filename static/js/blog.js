@@ -1,3 +1,4 @@
+#blog
 let allPosts = [];
 let currentCategory = "All";
 let currentKeyword = "";
