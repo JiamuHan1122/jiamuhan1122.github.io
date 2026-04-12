@@ -1,17 +1,17 @@
 
 
-[![senli1073](https://img.shields.io/badge/senli1073-github-blue?logo=github)](https://github.com/senli1073)
+[![GitHub](https://img.shields.io/badge/GitHub-Jiamu_Han-black?logo=github)](https://github.com/Jiamu_Han)
 
-He is currently a Fellow in the Department of Earth and Planetary Sciences (EPS) at Harvard University.
+He is currently pursuing a master's degree in Intelligent Science and Technology at Xi'an University of Architecture and Technology.
 
 #### Contact
 
-Email: senli[at]fas.harvard.edu
+Email: jim_harmony@xauat.edu.cn
 
 #### Education
-M.E., Computer Science and Technology, China University of Mining and Technology, 2022—2025.\
-B.E., Data Science and Big Data Technology, China University of Mining and Technology, 2018—2022.
+M.E., Intelligent Science and Technology, Xi’an University of Architecture and Technology, 2026—now.\
+B.E., Artificial Intelligence, Xi’an University of Architecture and Technology, 2022—2026.
 
 #### Research Interests
-Machine Learning for Seismology; Foundation Model; Observational Seismology; Microseismic Monitoring
+Video Understanding; Computer Vision
 
