@@ -65,10 +65,10 @@ function filterPosts() {
             currentCategory === "All" || category === currentCategory;
 
         const haystack = [
-            post.title,
-            post.summary,
-            post.category,
-            post.slug
+            post.title || "",
+            post.summary || "",
+            post.category || "",
+            post.slug || ""
         ].join(" ").toLowerCase();
 
         const matchKeyword = !keyword || haystack.includes(keyword);
@@ -120,8 +120,8 @@ function renderPosts(posts) {
             </div>
 
             <h3 class="blog-post-title">
-                <a href="post.html?slug=${encodeURIComponent(post.slug)}">
-                    ${escapeHtml(post.title)}
+                <a href="post.html?slug=${encodeURIComponent(post.slug || "")}">
+                    ${escapeHtml(post.title || "")}
                 </a>
             </h3>
 
@@ -130,7 +130,7 @@ function renderPosts(posts) {
             </p>
 
             <div class="blog-post-bottom">
-                <a class="blog-read-more" href="post.html?slug=${encodeURIComponent(post.slug)}">
+                <a class="blog-read-more" href="post.html?slug=${encodeURIComponent(post.slug || "")}">
                     Read more <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
