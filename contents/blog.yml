@@ -11,11 +11,17 @@ posts:
     category: "Natural Language Processing"
     summary: "A short note on the transformer architecture and its basic intuition."
 
-  - title: "My Project Log 01"
-    date: "2026-04-22"
-    slug: "project_log_01"
-    category: "Projects"
-    summary: "Some implementation notes and reflections from my recent project."
+  - title: "真正了解你的数据"
+    date: "2026-04-13"
+    slug: "Data Science foundations Know your data"
+    category: "数据集与数据理解"
+    summary: "数据科学最重要的不是模型，而是——真正理解你的数据.“Know your data, where it comes from, what’s in it, what it means.” "
+
+  - title: "数据集的基础知识"
+    date: "2026-04-13"
+    slug: "Dataset_Basics"
+    category: "数据集与数据理解"
+    summary: "关于数据集的基本知识和常用评价指标."
 
   - title: "面向视频数据的时序目标检测算法研究"
     date: "2026-04-12"
