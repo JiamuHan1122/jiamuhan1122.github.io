@@ -2,6 +2,6 @@
 链接: https://pan.baidu.com/s/11Vde6l6X_AtMFsCMQ3MuTg 提取码: cvtu 
 --来自百度网盘超级会员v7的分享
 
-<img src="D:\Github\jiamuhan1122.github.io\contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_01.png" alt="Data Science foundations Know your data. Really, really, know it_01" style="zoom:50%;" />
+<img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_01.png" alt="Data Science foundations Know your data. Really, really, know it_01" style="zoom:50%;" />
 
-<img src="D:\Github\jiamuhan1122.github.io\contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_02.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
+<img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_02.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
