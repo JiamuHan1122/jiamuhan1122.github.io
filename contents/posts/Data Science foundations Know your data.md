@@ -5,3 +5,5 @@
 <img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_01.png" alt="Data Science foundations Know your data. Really, really, know it_01" style="zoom:50%;" />
 
 <img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_02.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
+
+<img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_03.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
