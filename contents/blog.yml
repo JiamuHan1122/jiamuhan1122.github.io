@@ -28,3 +28,9 @@ posts:
     slug: "project_log"
     category: "毕业设计"
     summary: "毕业设计的思路/总结."
+
+  - title: "一些数据集汇总"
+    date: "2026-04-13"
+    slug: "一些数据集汇总的链接"
+    category: "数据集与数据理解"
+    summary: "数据集"
