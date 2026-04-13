@@ -232,7 +232,7 @@ Temporal stream 不使用 raw RGB frames，而是：
 
 #### Figure 1：Two-stream 总体架构图（最核心）
 
-![figure_01](\contents\posts\images\TAD_paper_1\figure_01.png)
+![figure_01](/contents/posts/images/TAD_paper_1/figure_01.png)
 
 **想回答的问题：**  
 动作识别是否可以拆成外观（spatial）+ 运动（temporal）两条网络分别学，然后再融合得到更好结果？
