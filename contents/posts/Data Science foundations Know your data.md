@@ -7,3 +7,19 @@
 <img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_02.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
 
 <img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_03.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
+
+<img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_04.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
+
+<img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_05.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
+
+<img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_06.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
+
+<img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_07.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
+
+<img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_08.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
+
+<img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_09.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
+
+<img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_10.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
+
+<img src="contents\posts\images\Know_your_data\Data Science foundations Know your data. Really, really, know it_11.png" alt="Data Science foundations Know your data. Really, really, know it_02" style="zoom:50%;" />
