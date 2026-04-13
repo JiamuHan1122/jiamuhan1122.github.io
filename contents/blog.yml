@@ -5,11 +5,11 @@ posts:
     category: "Computer Vision"
     summary: "An overview of the development of Temporal Action Detection (TAD), from sliding windows to transformer-based methods."
 
-  - title: "Transformer Basics"
-    date: "2026-04-20"
-    slug: "transformer_basics"
-    category: "Natural Language Processing"
-    summary: "A short note on the transformer architecture and its basic intuition."
+  - title: "双流卷积网络"
+    date: "2026-04-13"
+    slug: "Two-Stream CNN"
+    category: "时序目标检测算法学习笔记"
+    summary: "如何用深度学习方法有效同时建模视频中的外观信息（appearance）和运动信息（motion），从而提升视频动作识别性能"
 
   - title: "真正了解你的数据"
     date: "2026-04-13"
