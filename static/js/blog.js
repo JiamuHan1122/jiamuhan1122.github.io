@@ -1,5 +1,5 @@
 let allPosts = [];
-let currentCategory = "All";
+let currentCategory = "全部";
 let currentKeyword = "";
 
 async function fetchYaml(path) {
@@ -28,7 +28,7 @@ function normalizeText(text) {
 }
 
 function formatCategoryName(name) {
-    return name || "Uncategorized";
+    return name || "未分类";
 }
 
 function getAllCategories(posts) {
@@ -36,7 +36,7 @@ function getAllCategories(posts) {
     posts.forEach(post => {
         categories.add(formatCategoryName(post.category));
     });
-    return ["All", ...Array.from(categories).sort()];
+    return ["全部", ...Array.from(categories).sort()];
 }
 
 function renderCategories(categories) {
@@ -62,7 +62,7 @@ function filterPosts() {
         const category = formatCategoryName(post.category);
 
         const matchCategory =
-            currentCategory === "All" || category === currentCategory;
+            currentCategory === "全部" || category === currentCategory;
 
         const haystack = [
             post.title || "",
@@ -82,14 +82,14 @@ function renderMetaBar(posts) {
     if (!metaBar) return;
 
     const categoryText =
-        currentCategory === "All" ? "All categories" : currentCategory;
+        currentCategory === "全部" ? "当前分类：全部" : `当前分类：${currentCategory}`;
 
     const keywordText = currentKeyword
-        ? ` · Search: "${escapeHtml(currentKeyword)}"`
+        ? ` · 搜索：${escapeHtml(currentKeyword)}`
         : "";
 
     metaBar.innerHTML = `
-        <span><strong>${posts.length}</strong> post(s)</span>
+        <span><strong>${posts.length}</strong> 篇文章</span>
         <span> · ${escapeHtml(categoryText)}${keywordText}</span>
     `;
 }
@@ -130,8 +130,9 @@ function renderPosts(posts) {
             </p>
 
             <div class="blog-post-bottom">
+                <span class="blog-post-hint">点击标题或按钮阅读正文</span>
                 <a class="blog-read-more" href="post.html?slug=${encodeURIComponent(post.slug || "")}">
-                    Read more <i class="bi bi-arrow-right"></i>
+                    阅读全文 <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
         </article>
@@ -178,16 +179,16 @@ async function loadBlogList() {
         console.error(error);
 
         if (categoryContainer) {
-            categoryContainer.innerHTML = `<div style="color:red;">Failed to load categories</div>`;
+            categoryContainer.innerHTML = `<div style="color:red;">分类加载失败</div>`;
         }
 
         if (metaBar) {
-            metaBar.innerHTML = `<span style="color:red;">Failed to load metadata</span>`;
+            metaBar.innerHTML = `<span style="color:red;">博客信息加载失败</span>`;
         }
 
         listContainer.innerHTML = `
             <div class="blog-empty-state" style="color:red;">
-                Failed to load blog posts. Please check F12 Console.
+                文章加载失败，请检查 F12 控制台报错信息。
             </div>
         `;
     }
@@ -201,7 +202,7 @@ async function loadPost() {
     const slug = params.get("slug");
 
     if (!slug) {
-        container.innerHTML = "<p>No post slug provided.</p>";
+        container.innerHTML = "<p>未提供文章标识。</p>";
         return;
     }
 
@@ -220,7 +221,7 @@ async function loadPost() {
         container.innerHTML = marked.parse(md);
     } catch (error) {
         console.error(error);
-        container.innerHTML = `<p>Failed to load post: ${escapeHtml(slug)}.md</p>`;
+        container.innerHTML = `<p>文章加载失败：${escapeHtml(slug)}.md</p>`;
     }
 }
 
