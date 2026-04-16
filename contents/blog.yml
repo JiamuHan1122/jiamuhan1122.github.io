@@ -37,6 +37,6 @@ posts:
 
   - title: "ActivityNet数据集的下载操作方法"
     date: "2026-04-17"
-    slug: "ActivityNet"
+    slug: "ActivityNet数据集的下载操作指南"
     category: "数据集与数据理解"
     summary: "ActivityNet 下载踩坑实录： yt-dlp + cookies + Node"
