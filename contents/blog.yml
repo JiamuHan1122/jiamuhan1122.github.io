@@ -34,3 +34,9 @@ posts:
     slug: "一些数据集汇总的链接"
     category: "数据集与数据理解"
     summary: "数据集"
+
+  - title: "ActivityNet数据集的下载操作方法"
+    date: "2026-04-17"
+    slug: "ActivityNet 下载踩坑实录： yt-dlp + cookies + Node"
+    category: "数据集与数据理解"
+    summary: "数据集"
