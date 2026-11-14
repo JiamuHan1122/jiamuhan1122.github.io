@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: alshedivat/al-folio
-          ref: main
+          ref: 8158dd07b40eda745da47a55a8a711332286dbf5
           path: upstream
 
       - name: Preserve personal configuration and overlay it on official al-folio
@@ -38,7 +38,16 @@ jobs:
             _projects/missing-modality-multimodal-sentiment.md \
             _projects/undergraduate-thesis.md \
             assets/img/prof_pic.png
-          rsync -a --delete --exclude='.git/' --exclude='.github/workflows/deploy.yml' upstream/ ./
+
+          # Copy upstream files without deleting the source directory.
+          # The upstream checkout lives inside the workspace, so rsync --delete
+          # must not be used with the workspace as its destination.
+          tar -C upstream \
+            --exclude='.git' \
+            --exclude='.github/workflows/deploy.yml' \
+            -cf - . | tar -C . -xf -
+
+          # Restore the personal files over the official theme defaults.
           tar -xf /tmp/al-folio-overrides/site.tar -C .
           rm -rf upstream
 
