@@ -1,0 +1,237 @@
+/*******************************************************************************
+ * Typography styles: Headings, text, links, tables, blockquotes
+ ******************************************************************************/
+
+@use "variables" as v;
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+div,
+li,
+span,
+strong {
+ color: var(--global-text-color);
+}
+
+hr {
+ border-top: 1px solid var(--global-divider-color);
+}
+
+table:not(.table) {
+ td,
+ th {
+ font-size: 1rem;
+ padding: 0.45rem 1rem 0.45rem 0;
+ border-top: 1px solid var(--global-divider-color);
+ }
+
+ th {
+ font-weight: 600;
+ }
+}
+
+a,
+table.table a {
+ color: var(--global-theme-color);
+
+ &:hover {
+ color: var(--global-theme-color);
+ text-decoration: underline;
+ }
+
+ &:hover:after :not(.nav-item.dropdown) {
+ width: 100%;
+ }
+}
+
+.table-dark {
+ background-color: transparent;
+ &.table-bordered {
+ border: 1px solid var(--global-divider-color) !important;
+ }
+}
+
+blockquote {
+ background: var(--global-bg-color);
+ border-left: 5px solid var(--global-theme-color);
+ margin: 1.5em 0;
+ padding: 1em;
+ font-size: 1.2rem;
+
+ p {
+ margin-bottom: 0;
+ }
+
+ /* Tips, warnings, and dangers blockquotes */
+ &.block-tip {
+ border-color: var(--global-tip-block);
+ background-color: var(--global-tip-block-bg);
+
+ em,
+ li,
+ p,
+ strong {
+ color: var(--global-tip-block-text);
+ }
+
+ a,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+ color: var(--global-tip-block-title);
+ }
+ }
+
+ &.block-warning {
+ border-color: var(--global-warning-block);
+ background-color: var(--global-warning-block-bg);
+
+ em,
+ li,
+ p,
+ strong {
+ color: var(--global-warning-block-text);
+ }
+
+ a,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+ color: var(--global-warning-block-title);
+ }
+ }
+
+ &.block-danger {
+ border-color: var(--global-danger-block);
+ background-color: var(--global-danger-block-bg);
+
+ em,
+ li,
+ p,
+ strong {
+ color: var(--global-danger-block-text);
+ }
+
+ a,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+ color: var(--global-danger-block-title);
+ }
+ }
+}
+
+
+/*******************************************************************************
+ * Site-specific typography and profile refinements
+ ******************************************************************************/
+
+body {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.68;
+  letter-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.018em;
+}
+
+h1 {
+  font-size: 2.55rem;
+  font-weight: 400;
+  line-height: 1.16;
+  margin-bottom: 0.45rem;
+}
+
+h2 {
+  font-size: 1.62rem;
+  font-weight: 500;
+  line-height: 1.28;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.72;
+}
+
+li {
+  line-height: 1.65;
+}
+
+.profile {
+  margin-bottom: 1.5rem;
+
+  img {
+    display: block;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(31, 50, 71, 0.07);
+    object-fit: cover;
+  }
+
+  .more-info {
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--global-text-color-light);
+
+    p {
+      display: block;
+      margin: 0 0 0.18rem;
+      color: var(--global-text-color-light);
+    }
+  }
+}
+
+.navbar {
+  opacity: 1;
+  border-bottom: 1px solid var(--global-divider-color);
+  background-color: var(--global-bg-color);
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 0.94rem;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+    padding-left: 0.68rem;
+    padding-right: 0.68rem;
+  }
+
+  .navbar-nav .nav-item.active > .nav-link {
+    color: var(--global-theme-color);
+    font-weight: 600;
+  }
+}
+
+footer.sticky-bottom {
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 1.35rem;
+  padding-bottom: 1.35rem;
+  background: var(--global-bg-color);
+}

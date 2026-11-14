@@ -6,13 +6,12 @@ subtitle: M.S. Student in Intelligent Science and Technology · Xi'an University
 
 profile:
   align: right
-  image: prof_pic.png
+  image: jiamu-profile.webp
   image_circular: false
   more_info: >
     <p>School of Artificial Intelligence and Robotics</p>
     <p>Xi'an University of Architecture and Technology</p>
     <p>Xi'an, China</p>
-    <p><a href="mailto:jim_harmony@xauat.edu.cn">jim_harmony@xauat.edu.cn</a></p>
 
 selected_papers: true
 social: true
@@ -24,11 +23,11 @@ latest_posts:
   enabled: false
 ---
 
-Hello! I am **Jiamu Han**, a master's student in **Intelligent Science and Technology** at the School of Artificial Intelligence and Robotics, Xi'an University of Architecture and Technology (XAUAT). I received my bachelor's degree in **Artificial Intelligence** from the School of Information and Control Engineering at the same university in 2026.
+Hello! I am **Jiamu Han**, a master's student in **Intelligent Science and Technology** at the School of Artificial Intelligence and Robotics, Xi'an University of Architecture and Technology (XAUAT). I received my B.Eng. degree in **Artificial Intelligence** from the School of Information and Control Engineering at XAUAT in 2026.
 
-My research focuses on **video understanding and computer vision**, particularly temporal action detection and action recognition. I am interested in modeling how actions evolve over time, localizing meaningful events in untrimmed videos, and learning spatiotemporal representations for fine-grained action understanding.
+My research interests center on **video understanding and computer vision**, especially temporal action detection and action recognition. I am interested in temporal localization, spatiotemporal representation learning, and modeling how human actions unfold over time.
 
-More broadly, my current work explores **3D human interaction understanding** through body-part motion and spatial relationships, as well as **robust multimodal learning** under missing or noisy modalities.
+I also explore **fine-grained 3D human interaction understanding** and **robust multimodal learning**, including how body-part motion, spatial relations, and incomplete multimodal evidence influence model decisions.
 
 ## Research Interests
 
@@ -53,5 +52,3 @@ More broadly, my current work explores **3D human interaction understanding** th
 - Silver Award, China International College Students' Innovation Competition (Main Track, Shaanxi Division), 2024.
 - Bronze Award, China International College Students' Innovation Competition (Industry Track, Shaanxi Division), 2024.
 - Second Prize, China Collegiate Computing Competition (Artificial Intelligence Track, Northwest Division), 2024.
-
-<!-- Rebuild trigger: Python pip cache disabled; Ruby 3.3.13 -->

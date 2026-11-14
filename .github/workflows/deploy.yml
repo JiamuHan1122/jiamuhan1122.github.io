@@ -37,7 +37,9 @@ jobs:
             _projects/3d-human-interaction-understanding.md \
             _projects/missing-modality-multimodal-sentiment.md \
             _projects/undergraduate-thesis.md \
-            assets/img/prof_pic.png
+            assets/img/jiamu-profile.webp \
+            _sass/_themes.scss \
+            _sass/_typography.scss
 
           # Copy upstream files without deleting the source directory.
           # The upstream checkout lives inside the workspace, so rsync --delete
@@ -49,6 +51,7 @@ jobs:
 
           # Restore the personal files over the official theme defaults.
           tar -xf /tmp/al-folio-overrides/site.tar -C .
+          rm -f assets/img/prof_pic.png
           rm -rf upstream
 
       - name: Setup Ruby
