@@ -53,3 +53,5 @@ More broadly, my current work explores **3D human interaction understanding** th
 - Silver Award, China International College Students' Innovation Competition (Main Track, Shaanxi Division), 2024.
 - Bronze Award, China International College Students' Innovation Competition (Industry Track, Shaanxi Division), 2024.
 - Second Prize, China Collegiate Computing Competition (Artificial Intelligence Track, Northwest Division), 2024.
+
+<!-- Rebuild trigger: Python pip cache disabled; Ruby 3.3.13 -->
