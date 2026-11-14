@@ -43,8 +43,8 @@ I also explore **fine-grained 3D human interaction understanding** and **robust 
     <div class="selected-publication__venue">CICTP</div>
     <img
       class="selected-publication__image"
-      src="/assets/img/cictp-campus-layout.webp"
-      alt="Campus building layout and detailed point-of-interest distribution from the CICTP 2025 paper"
+      src="{{ '/assets/img/cictp-fig1-fig2.jpg' | relative_url }}"
+      alt="Campus vectorized environment and detailed building and point-of-interest distribution" decoding="async"
       loading="lazy"
     />
   </div>
