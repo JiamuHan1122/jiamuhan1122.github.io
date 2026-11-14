@@ -87,6 +87,9 @@ jobs:
           npm install -g purgecss
           purgecss -c purgecss.config.js
 
+      - name: Mark generated site as prebuilt static content
+        run: touch _site/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
