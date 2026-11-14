@@ -1,0 +1,67 @@
+cv:
+  name: Jiamu Han
+  label: M.S. Student in Intelligent Science and Technology
+  email: jim_harmony@xauat.edu.cn
+  location: Xi'an, China
+  summary: Master's student at Xi'an University of Architecture and Technology. Research interests include video understanding, temporal action detection, action recognition, 3D human interaction understanding, and multimodal learning.
+
+  social_networks:
+    - network: GitHub
+      username: JiamuHan1122
+
+  sections:
+    Education:
+      - institution: Xi'an University of Architecture and Technology
+        location: Xi'an, China
+        area: Intelligent Science and Technology
+        studyType: M.S. Student
+        start_date: 2026
+        highlights:
+          - School of Artificial Intelligence and Robotics.
+          - Research focus: video understanding, temporal action detection, and action recognition.
+
+      - institution: Xi'an University of Architecture and Technology
+        location: Xi'an, China
+        area: Artificial Intelligence
+        studyType: Bachelor of Engineering
+        start_date: 2022
+        end_date: 2026
+        highlights:
+          - School of Information and Control Engineering.
+          - Undergraduate thesis: Research on Temporal Action Detection Algorithms for Video Data.
+
+    Awards:
+      - title: Special Prize, 19th Shaanxi Undergraduate Excellent Graduation Project (Thesis) Competition for Automation-related Majors
+        date: 2026
+        awarder: Shaanxi Undergraduate Excellent Graduation Project (Thesis) Competition
+        summary: Awarded for the undergraduate thesis on temporal action detection algorithms for video data.
+
+      - title: Bronze Award, China International College Students' Innovation Competition (Main Track)
+        date: 2025
+        awarder: China International College Students' Innovation Competition
+
+      - title: Third Prize, 8th National College Student Embedded Chip and System Design Competition (Northwest Division)
+        date: 2025
+        awarder: National College Student Embedded Chip and System Design Competition
+
+      - title: Silver Award, China International College Students' Innovation Competition (Main Track, Shaanxi Division)
+        date: 2024
+        awarder: China International College Students' Innovation Competition
+
+      - title: Bronze Award, China International College Students' Innovation Competition (Industry Track, Shaanxi Division)
+        date: 2024
+        awarder: China International College Students' Innovation Competition
+
+      - title: Second Prize, China Collegiate Computing Competition (Artificial Intelligence Track, Northwest Division)
+        date: 2024
+        awarder: China Collegiate Computing Competition
+
+    Publications:
+      - title: Exploring the Generative Impact of Building Layout and Functional Distribution on Campus Mobility Using Diffusion Models
+        authors:
+          - Jiamu Han
+          - Y. Dang
+          - K. Wang
+        publisher: CICTP 2025
+        releaseDate: 2025
+        url: https://ascelibrary.org/doi/10.1061/9780784486269.260
