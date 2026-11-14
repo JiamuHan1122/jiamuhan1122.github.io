@@ -2,59 +2,7 @@ name: Deploy site
 
 on:
   push:
-    branches:
-      - master
-      - main
-    paths:
-      - "assets/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!docs/CONTRIBUTING.md"
-      - "!docs/CUSTOMIZE.md"
-      - "!docs/FAQ.md"
-      - "!docs/INSTALL.md"
-      - "!README.md"
-  pull_request:
-    branches:
-      - master
-      - main
-    paths:
-      - "assets/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!docs/CONTRIBUTING.md"
-      - "!docs/CUSTOMIZE.md"
-      - "!docs/FAQ.md"
-      - "!docs/INSTALL.md"
-      - "!README.md"
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -62,47 +10,76 @@ permissions:
 
 jobs:
   deploy:
-    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v7
-      - name: Setup Ruby 💎
+      - name: Checkout personal site repository
+        uses: actions/checkout@v4
+
+      - name: Checkout official al-folio source
+        uses: actions/checkout@v4
+        with:
+          repository: alshedivat/al-folio
+          ref: main
+          path: upstream
+
+      - name: Preserve personal configuration and overlay it on official al-folio
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/al-folio-overrides
+          tar -cf /tmp/al-folio-overrides/site.tar \
+            _config.yml \
+            _pages/about.md _pages/research.md _pages/projects.md _pages/publications.md _pages/cv.md \
+            _bibliography/papers.bib \
+            _data/socials.yml _data/cv.yml \
+            _projects/temporal-action-detection.md \
+            _projects/action-recognition.md \
+            _projects/3d-human-interaction-understanding.md \
+            _projects/missing-modality-multimodal-sentiment.md \
+            _projects/undergraduate-thesis.md \
+            assets/img/prof_pic.png
+          rsync -a --delete --exclude='.git/' --exclude='.github/workflows/deploy.yml' upstream/ ./
+          tar -xf /tmp/al-folio-overrides/site.tar -C .
+          rm -rf upstream
+
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3.13"
           bundler-cache: true
-      - name: Setup Python 🐍
-        uses: actions/setup-python@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-          cache: "pip" # caching pip dependencies
-      - name: Setup Node 🧰
-        uses: actions/setup-node@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
-      - name: Install JS deps 📦
+          cache: npm
+
+      - name: Install JavaScript dependencies
         run: npm ci
-      - name: Update _config.yml ⚙️
-        uses: fjogeleit/yaml-update-action@dffe9a5223d84653c13374032382f6bb5de8e5ef # v0.17.0
-        with:
-          commitChange: false
-          valueFile: "_config.yml"
-          propertyPath: "giscus.repo"
-          value: ${{ github.repository }}
-      - name: Install and Build 🔧
+
+      - name: Install image tools and Python dependencies
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          pip install --upgrade nbconvert
+
+      - name: Build Jekyll site
+        run: |
           export JEKYLL_ENV=production
           bundle exec jekyll build
-      - name: Purge unused CSS 🧹
+
+      - name: Purge unused CSS
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
-      - name: Deploy 🚀
-        if: github.event_name != 'pull_request'
+
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+          branch: gh-pages

@@ -7,12 +7,14 @@ first_name: Jiamu
 middle_name:
 last_name: Han
 contact_note: >
-  Email is the best way to reach me.
+  You can even add a little note about which of these is the best way to reach you.
 description: >
   Jiamu Han is a master's student in Intelligent Science and Technology at Xi'an University of Architecture and Technology. His research interests include video understanding, temporal action detection, action recognition, 3D human interaction understanding, and multimodal learning.
 footer_text: >
-  © 2026 Jiamu Han. Built with <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> and <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.
-keywords: Jiamu Han, video understanding, temporal action detection, action recognition, computer vision, artificial intelligence
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
@@ -134,8 +136,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Jiamu Han
-blog_description: Research notes on video understanding, temporal action detection, and computer vision.
+blog_name: al-folio # blog_name will be displayed in your blog page
+blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -164,7 +166,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname:
+disqus_shortname: al-folio # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
