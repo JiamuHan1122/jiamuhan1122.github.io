@@ -38,6 +38,7 @@ jobs:
             _projects/missing-modality-multimodal-sentiment.md \
             _projects/undergraduate-thesis.md \
             assets/img/jiamu-profile.webp \
+            assets/img/jim-favicon.svg \
             _sass/_themes.scss \
             _sass/_typography.scss
 

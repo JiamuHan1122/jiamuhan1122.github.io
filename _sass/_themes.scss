@@ -1,6 +1,9 @@
 /*******************************************************************************
- * Jiamu Han — light academic color system
+ * Jiamu Han — light/dark academic color system
  * Local al-folio v1.x theme-token override.
+ *
+ * Keep the light palette restrained and paper-like. The dark palette uses the
+ * same blue identity with softened contrast for comfortable long-form reading.
  ******************************************************************************/
 
 :root {
@@ -37,6 +40,24 @@
   --global-danger-block-text: #7a271a;
   --global-danger-block-title: #b42318;
 
+  /* System preference is the initial setting: show the half-sun/half-moon. */
+  #light-toggle-system {
+    display: inline-block;
+  }
+
+  #light-toggle-dark,
+  #light-toggle-light {
+    display: none;
+  }
+
+  .only-light {
+    display: block;
+  }
+
+  .only-dark {
+    display: none;
+  }
+
   #back-to-top {
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
@@ -46,4 +67,118 @@
     width: 40px;
     z-index: 10;
   }
+}
+
+/* Dark mode keeps the same blue identity without using pure black. */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --global-bg-color: #171d25;
+  --global-code-bg-color: #202b37;
+  --global-text-color: #e0e7ef;
+  --global-text-color-light: #9eacbb;
+  --global-theme-color: #8abce3;
+  --global-hover-color: #b3d6f2;
+  --global-hover-text-color: #17212b;
+  --global-footer-bg-color: #171d25;
+  --global-footer-text-color: #9eacbb;
+  --global-footer-link-color: #8abce3;
+  --global-distill-app-color: #c0ccd8;
+  --global-divider-color: rgba(196, 213, 229, 0.18);
+  --global-card-bg-color: #202a35;
+  --global-highlight-color: #ff9b91;
+  --global-back-to-top-bg-color: rgba(224, 231, 239, 0.24);
+  --global-back-to-top-text-color: #17212b;
+  --global-newsletter-bg-color: #202a35;
+  --global-newsletter-text-color: #e0e7ef;
+
+  --global-tip-block: #65c99a;
+  --global-tip-block-bg: #1d4738;
+  --global-tip-block-text: #c6f6de;
+  --global-tip-block-title: #e2f5ec;
+  --global-warning-block: #e7c75a;
+  --global-warning-block-bg: #51451a;
+  --global-warning-block-text: #fff2af;
+  --global-warning-block-title: #fff8d8;
+  --global-danger-block: #ff8b83;
+  --global-danger-block-bg: #542b2b;
+  --global-danger-block-text: #ffd4d1;
+  --global-danger-block-title: #ffe0e0;
+
+  .only-light {
+    display: none;
+  }
+
+  .only-dark {
+    display: block;
+  }
+}
+
+/* Match the native al-folio three-state theme control. */
+html[data-theme-setting="dark"] {
+  #light-toggle-system,
+  #light-toggle-light {
+    display: none;
+  }
+
+  #light-toggle-dark {
+    display: inline-block;
+  }
+}
+
+html[data-theme-setting="light"] {
+  #light-toggle-system,
+  #light-toggle-dark {
+    display: none;
+  }
+
+  #light-toggle-light {
+    display: inline-block;
+  }
+}
+
+.fa-half-sun-moon {
+  position: relative;
+  display: inline-block;
+  --fa-font: var(--fa-font-solid);
+  speak: none;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 1em;
+  height: 1em;
+}
+
+.fa-half-sun-moon::before,
+.fa-half-sun-moon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: -0.5px;
+  bottom: -0.5px;
+  text-align: center;
+  line-height: 1em;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  font: var(--fa-font);
+}
+
+/* Left half: moon. Right half: sun. */
+.fa-half-sun-moon::before {
+  content: "\f111";
+  color: var(--global-text-color);
+  clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
+}
+
+.fa-half-sun-moon::after {
+  content: "\f185";
+  color: var(--global-text-color);
+  clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
+  right: -1.5px;
+  transform: translateX(-1px);
+}
+
+#light-toggle:hover .fa-half-sun-moon::before,
+#light-toggle:hover .fa-half-sun-moon::after {
+  color: var(--global-theme-color);
 }
