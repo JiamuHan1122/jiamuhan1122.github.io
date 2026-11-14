@@ -13,7 +13,7 @@ profile:
     <p>Xi'an University of Architecture and Technology</p>
     <p>Xi'an, China</p>
 
-selected_papers: true
+selected_papers: false
 social: true
 
 announcements:
@@ -35,6 +35,28 @@ I also explore **fine-grained 3D human interaction understanding** and **robust 
 - **Action Recognition:** spatiotemporal representation learning and fine-grained recognition of human actions from visual and motion cues.
 - **3D Human Interaction Understanding:** body-part kinematics, spatial relations, and motion trajectories for distinguishing fine-grained interaction mechanisms.
 - **Multimodal Learning:** robustness to missing or noisy modalities, modality reliability, and temporal affective dynamics.
+
+## selected publications
+
+<div class="selected-publication">
+  <div class="selected-publication__media">
+    <div class="selected-publication__venue">CICTP</div>
+    <img
+      class="selected-publication__image"
+      src="/assets/img/cictp-campus-layout.webp"
+      alt="Campus building layout and detailed point-of-interest distribution from the CICTP 2025 paper"
+      loading="lazy"
+    />
+  </div>
+  <div class="selected-publication__content">
+    <div class="selected-publication__title">Exploring the Generative Impact of Building Layout and Functional Distribution on Campus Mobility Using Diffusion Models</div>
+    <div class="selected-publication__authors"><strong>Jiamu Han</strong>, Yutian Dang, and Kaiping Wang</div>
+    <div class="selected-publication__proceedings">Proceedings of the CICTP 2025, 2025</div>
+    <div class="selected-publication__links">
+      <a class="selected-publication__link" href="https://doi.org/10.1061/9780784486269.260" target="_blank" rel="external nofollow noopener">PAPER</a>
+    </div>
+  </div>
+</div>
 
 ## Education
 

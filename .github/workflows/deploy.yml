@@ -39,6 +39,7 @@ jobs:
             _projects/undergraduate-thesis.md \
             assets/img/jiamu-profile.webp \
             assets/img/jim-favicon.svg \
+            assets/img/cictp-campus-layout.webp \
             _sass/_themes.scss \
             _sass/_typography.scss
 

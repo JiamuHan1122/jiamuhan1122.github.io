@@ -235,3 +235,121 @@ footer.sticky-bottom {
   padding-bottom: 1.35rem;
   background: var(--global-bg-color);
 }
+
+
+
+/*******************************************************************************
+ * Selected publications — two-column academic entry
+ * Venue label and paper preview follow the reference layout.
+ ******************************************************************************/
+
+.selected-publication {
+  display: grid;
+  grid-template-columns: minmax(0, 210px) minmax(0, 1fr);
+  gap: 1.7rem;
+  align-items: start;
+  margin: 1.1rem 0 2.1rem;
+}
+
+.selected-publication__media {
+  min-width: 0;
+}
+
+.selected-publication__venue {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.55rem;
+  padding: 0.12rem 0.45rem;
+  border-radius: 5px;
+  background: #c9c5ff;
+  color: #171a2a;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+html[data-theme="dark"] .selected-publication__venue {
+  background: #555a96;
+  color: #f5f5ff;
+}
+
+.selected-publication__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.97 / 1;
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(20, 32, 45, 0.08);
+}
+
+.selected-publication__content {
+  min-width: 0;
+}
+
+.selected-publication__title {
+  margin: 0 0 0.15rem;
+  font-size: 1.12rem;
+  font-weight: 500;
+  line-height: 1.42;
+}
+
+.selected-publication__authors {
+  margin: 0 0 0.12rem;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.selected-publication__proceedings {
+  margin: 0 0 0.55rem;
+  color: var(--global-text-color-light);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.selected-publication__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+a.selected-publication__link,
+a.selected-publication__link:visited {
+  display: inline-flex;
+  min-width: 84px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28rem 0.9rem;
+  border: 1px solid var(--global-text-color);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--global-text-color);
+  font-size: 0.77rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+a.selected-publication__link:hover {
+  border-color: var(--global-theme-color);
+  background: var(--global-theme-color);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .selected-publication {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem 0 1.7rem;
+  }
+
+  .selected-publication__media {
+    max-width: 360px;
+  }
+}
