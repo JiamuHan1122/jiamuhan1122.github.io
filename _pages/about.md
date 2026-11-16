@@ -58,7 +58,7 @@ I also explore **fine-grained 3D human interaction understanding** and **robust 
   <div class="selected-publication__content">
     <div class="selected-publication__title">Exploring the Generative Impact of Building Layout and Functional Distribution on Campus Mobility Using Diffusion Models</div>
     <div class="selected-publication__authors"><strong>Jiamu Han</strong>, Yutian Dang, and Kaiping Wang</div>
-    <div class="selected-publication__proceedings">Proceedings of the CICTP 2025, 2025</div>
+    <div class="selected-publication__proceedings">Proceedings of the CICTP 2025</div>
     <div class="selected-publication__links">
       <a class="selected-publication__link" href="https://doi.org/10.1061/9780784486269.260" target="_blank" rel="external nofollow noopener">PAPER</a>
     </div>
