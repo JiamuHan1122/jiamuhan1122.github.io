@@ -40,13 +40,20 @@ I also explore **fine-grained 3D human interaction understanding** and **robust 
 
 <div class="selected-publication">
   <div class="selected-publication__media">
+    <div class="selected-publication__venue">CAC 2026</div>
+    <img class="selected-publication__image" src="{{ '/assets/img/unitad-cac-2026-fig2.webp' | relative_url }}" alt="Overall framework of the proposed reliability-aware temporal action detection method" decoding="async" loading="lazy" />
+  </div>
+  <div class="selected-publication__content">
+    <div class="selected-publication__title">UniTAD: A Unified Temporal Reliability Framework for One-Stage Action Detection</div>
+    <div class="selected-publication__authors"><strong>Jiamu Han</strong>, Yumeng Wang*, Yuebo Meng, and Jiayi Guo</div>
+    <div class="selected-publication__proceedings">Accepted to the China Automation Congress (CAC), 2026</div>
+  </div>
+</div>
+
+<div class="selected-publication">
+  <div class="selected-publication__media">
     <div class="selected-publication__venue">CICTP</div>
-    <img
-      class="selected-publication__image"
-      src="{{ '/assets/img/cictp-fig1-fig2.jpg' | relative_url }}"
-      alt="Campus vectorized environment and detailed building and point-of-interest distribution" decoding="async"
-      loading="lazy"
-    />
+    <img class="selected-publication__image" src="{{ '/assets/img/cictp-fig1-fig2.jpg' | relative_url }}" alt="Campus vectorized environment and detailed building and point-of-interest distribution" decoding="async" loading="lazy" />
   </div>
   <div class="selected-publication__content">
     <div class="selected-publication__title">Exploring the Generative Impact of Building Layout and Functional Distribution on Campus Mobility Using Diffusion Models</div>
