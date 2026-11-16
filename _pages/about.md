@@ -9,10 +9,8 @@ profile:
   image: jiamu-profile.png
   image_circular: false
   more_info: >
-    <p>School of Artificial Intelligence and Robotics</p>
-    <p>Xi'an University of Architecture and Technology</p>
-    <p>Xi'an, China</p>
-
+    <p>we choose to go to the moon not because it is easy but because it is hard</p>
+    
 selected_papers: false
 social: true
 
