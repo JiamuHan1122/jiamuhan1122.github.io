@@ -8,10 +8,37 @@ profile:
   align: right
   image: jiamu-profile.png
   image_circular: false
-  more_info: >
-    <p>We choose to go to the moon </p>
-    <p>not because it is easy </p>
-    <p>but because it is hard </p>
+
+  more_info: |
+    <blockquote style="
+      margin: 1.25rem 0 0;
+      padding: 0.15rem 0 0.15rem 1rem;
+      border-left: 3px solid var(--global-theme-color);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 0.95rem;
+      font-style: italic;
+      line-height: 1.7;
+      color: var(--global-text-color);
+    ">
+      <p style="margin: 0;">
+        “We choose to go to the Moon in this decade and do the other things,
+        not because they are easy, but because they are hard.”
+      </p>
+      <footer style="
+        margin-top: 0.65rem;
+        text-align: right;
+        font-family: inherit;
+        font-size: 0.82rem;
+        font-style: normal;
+        line-height: 1.6;
+      ">
+        — John F. Kennedy<br>
+        <cite style="font-style: italic;">
+          Address at Rice University on the Nation’s Space Effort, September 12, 1962
+        </cite>
+      </footer>
+    </blockquote>
+
 selected_papers: false
 social: true
 
