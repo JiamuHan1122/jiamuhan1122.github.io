@@ -9,8 +9,9 @@ profile:
   image: jiamu-profile.png
   image_circular: false
   more_info: >
-    <p>we choose to go to the moon not because it is easy but because it is hard</p>
-    
+    <p>We choose to go to the moon </p>
+    <p>not because it is easy /p>
+    <p>but because it is hard</p>
 selected_papers: false
 social: true
 
