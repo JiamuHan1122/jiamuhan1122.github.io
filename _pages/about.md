@@ -10,7 +10,7 @@ profile:
   image_circular: false
   more_info: >
     <p>We choose to go to the moon </p>
-    <p>not because it is easy /p>
+    <p>not because it is easy </p>
     <p>but because it is hard</p>
 selected_papers: false
 social: true
