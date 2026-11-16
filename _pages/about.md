@@ -52,7 +52,7 @@ I also explore **fine-grained 3D human interaction understanding** and **robust 
 
 <div class="selected-publication">
   <div class="selected-publication__media">
-    <div class="selected-publication__venue">CICTP2025</div>
+    <div class="selected-publication__venue">CICTP 2025</div>
     <img class="selected-publication__image" src="{{ '/assets/img/cictp-fig1-fig2.jpg' | relative_url }}" alt="Campus vectorized environment and detailed building and point-of-interest distribution" decoding="async" loading="lazy" />
   </div>
   <div class="selected-publication__content">
