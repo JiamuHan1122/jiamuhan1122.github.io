@@ -6,7 +6,7 @@ subtitle: M.S. Student in Intelligent Science and Technology · Xi'an University
 
 profile:
   align: right
-  image: jiamu-profile.webp
+  image: jiamu-profile.png
   image_circular: false
   more_info: >
     <p>School of Artificial Intelligence and Robotics</p>
